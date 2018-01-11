@@ -16,13 +16,13 @@ add_executable(
     src/commander.c
     src/joystick.c
     src/main.c
-    oscc/api/src/oscc.c)
+    ${PROJECT_SOURCE_DIR}/../oscc/api/src/oscc.c)
 
 target_include_directories(
     oscc-joystick-commander
     PRIVATE
     include
-    oscc/api/include
+    ${PROJECT_SOURCE_DIR}/../oscc/api/include
     ${SDL2_INCLUDE_DIRS})
 
 target_link_libraries(
